@@ -9,6 +9,7 @@ def crypto_init():
     params = {
         'key': NOMICS_API_KEY,
         'ids':'BTC'
+        #take in from user input maybe 'ids'
     }
 
     response = requests.get('https://api.nomics.com/v1/currencies/ticker',params)
