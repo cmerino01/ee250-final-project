@@ -48,6 +48,8 @@ while True:
 
         if grovepi.digitalRead(PORT_BUTTON):
             grovepi.digitalWrite(PORT_RED_BUTTON, 1)
+        
+        grovepi.digitalWrite(PORT_RED_BUTTON, 0)
 
         # Display app name
         lcd.setText_norefresh(APPS[app]['name'])
