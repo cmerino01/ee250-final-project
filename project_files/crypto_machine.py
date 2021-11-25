@@ -33,18 +33,9 @@ APPS = [
     nomics.BITCOIN_APP
 ]
 
-# Cache to store values so we save time and don't abuse the APIs
-CACHE = [''] * len(APPS)
-for i in range(len(APPS)):
-    # Includes a two space offset so that the scrolling works better
-    CACHE[i] = '  ' + APPS[i]['init']()
-
-app = 0     # Active app
-ind = 0     # Output index
-
 while True:
     try:
-
+        temp = APPS
         # Display app name
         lcd.setText_norefresh(APPS[app]['name'])
 
