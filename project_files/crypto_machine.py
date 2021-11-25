@@ -11,6 +11,7 @@ import grove_rgb_lcd as lcd
 import nomics
 
 PORT_BUZZER = 2             # D2
+PORT_BUTTON = 8             # D8
 PORT_RED_BUTTON = 3         # D3
 PORT_GREEN_BUTTON = 4       # D4
 
@@ -26,7 +27,7 @@ grovepi.pinMode(PORT_BUZZER, "OUTPUT")
 grovepi.pinMode(PORT_GREEN_BUTTON, "INPUT")
 grovepi.pinMode(PORT_RED_BUTTON, "INPUT")
 
-lcd.setRGB(0, 128, 0)
+lcd.setRGB(255, 255, 255)
 
 # Installed Apps!
 APPS = [
@@ -44,6 +45,9 @@ ind = 0     # Output index
 
 while True:
     try:
+
+        if grovepi.digitalRead(PORT_BUTTON):
+            grovepi.digitalWrite(PORT_RED_BUTTON, 1)
 
         # Display app name
         lcd.setText_norefresh(APPS[app]['name'])
