@@ -47,6 +47,8 @@ while True:
 
         # Display app name
         lcd.setText_norefresh(APPS[app]['name'])
+        #Display Output
+        lcd.setText_norefresh('\n' + CACHE[app][ind:ind+LCD_LINE_LEN])
 
     except KeyboardInterrupt:
         # Gracefully shutdown on Ctrl-C
