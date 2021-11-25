@@ -43,13 +43,26 @@ for i in range(len(APPS)):
 app = 0     # Active app
 ind = 0     # Output index
 
+init_price = 0
 while True:
     try:
 
         if grovepi.digitalRead(PORT_BUTTON):
-            grovepi.digitalWrite(PORT_RED_BUTTON, 1)
-        
-        grovepi.digitalWrite(PORT_RED_BUTTON, 0)
+            #make a new call to API to get updated price
+            continue
+
+        #if(updated_price == init_price):
+        #continue
+        #elif(updated_price > init_price):
+        #init_price = updated_price
+        #grovepi.digitalWrite(PORT_GREEN_BUTTON, 1)
+        #elif(updated_price < init_price):
+        #init_price = updated_price
+        #grovepi.digitalWrite(PORT_RED_BUTTON, 1)
+
+        #turn off lights code
+        #grovepi.digitalWrite(PORT_RED_BUTTON, 0)
+        #grovepi.digitalWrite(PORT_GREEN_BUTTON, 0)
 
         # Display app name
         lcd.setText_norefresh(APPS[app]['name'])
