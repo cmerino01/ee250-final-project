@@ -20,10 +20,7 @@ def crypto_init():
         # Extract the BTC data from the data.
         alldat = data[0]
         price = alldat.get('price')
-        #wrap up crypto nicely
-        combo = {"BTC": price}
-        print(combo) #sanity check
-        return combo
+        return str(price)
 
     else:
         print('error: got response code %d' % response.status_code)
