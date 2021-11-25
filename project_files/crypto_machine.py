@@ -36,6 +36,7 @@ APPS = [
 while True:
     try:
         temp = APPS
+        print(temp)
         # Display app name
         lcd.setText_norefresh("Crypto Ticker")
 
