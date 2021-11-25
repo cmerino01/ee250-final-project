@@ -30,10 +30,7 @@ lcd.setRGB(0, 128, 0)
 
 # Installed Apps!
 APPS = [
-    my_weather.WEATHER_APP,
-    my_reddit.QOTD_APP,
-    # TODO: Add your new app here
-    my_anime.ANIME_APP
+    nomics.BITCOIN_APP
 ]
 
 # Cache to store values so we save time and don't abuse the APIs
@@ -45,54 +42,12 @@ for i in range(len(APPS)):
 app = 0     # Active app
 ind = 0     # Output index
 
-ogthresh = -1
 while True:
     try:
-        threshold = int(grovepi.analogRead(potentiometer))
-        conv = threshold / 1023
-        threshold = conv * 4
-        threshold = int(threshold)
-        print(threshold)
-        time.sleep(0.1)
-
-        # Check for input
-        if(ogthresh == threshold):
-            pass
-        elif(ogthresh != threshold):
-            ogthresh = threshold
-            if(threshold == 0):
-                lcd.setRGB(0,0,0)
-            elif(threshold == 1):
-                lcd.setRGB(255,0,0)
-            elif(threshold == 2):
-                lcd.setRGB(0,255,0)
-            elif(threshold == 3):
-                lcd.setRGB(255,223,0)
-            elif(threshold == 4):
-                lcd.setRGB(0,128,128)
-
-
-        if grovepi.digitalRead(PORT_GREEN_BUTTON):
-            # BEEP!
-            grovepi.digitalWrite(PORT_BUZZER, 1)
-
-            # Switch app
-            app = (app + 1) % len(APPS)
-            ind = 0
-
-        time.sleep(0.1)
-
-        grovepi.digitalWrite(PORT_BUZZER, 0)
 
         # Display app name
         lcd.setText_norefresh(APPS[app]['name'])
 
-        # Scroll output
-        lcd.setText_norefresh('\n' + CACHE[app][ind:ind+LCD_LINE_LEN])
-        # TODO: Make the output scroll across the screen (should take 1-2 lines of code)
-        ind += 1
-        if (ind >= len(CACHE[app])):
-            ind -= len(CACHE[app])
     except KeyboardInterrupt:
         # Gracefully shutdown on Ctrl-C
         lcd.setText('')
