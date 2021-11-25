@@ -37,7 +37,7 @@ while True:
     try:
         temp = APPS
         # Display app name
-        lcd.setText_norefresh(APPS[app]['name'])
+        lcd.setText_norefresh("Crypto Ticker")
 
     except KeyboardInterrupt:
         # Gracefully shutdown on Ctrl-C
