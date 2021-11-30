@@ -56,21 +56,21 @@ while True:
                 # Includes a two space offset so that the scrolling works better
                 CACHE[i] = '  ' + APPS[i]['init']()
             updated_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
-
-        if(updated_price == init_price):
-            continue
-        elif(updated_price > init_price):
-            init_price = updated_price
-            grovepi.digitalWrite(PORT_GREEN_BUTTON, 1)
-            #recovery period (meant to prevent overloading api requests)
-            time.sleep(1)
-            grovepi.digitalWrite(PORT_GREEN_BUTTON, 0)
-        elif(updated_price < init_price):
-            init_price = updated_price
-            grovepi.digitalWrite(PORT_RED_BUTTON, 1)
-            #recovery period (meant to prevent overloading api requests)
-            time.sleep(1)
-            grovepi.digitalWrite(PORT_RED_BUTTON, 0)
+            #hit the lights
+            if(updated_price == init_price):
+                continue
+            elif(updated_price > init_price):
+                init_price = updated_price
+                grovepi.digitalWrite(PORT_GREEN_BUTTON, 1)
+                #recovery period (meant to prevent overloading api requests)
+                time.sleep(1)
+                grovepi.digitalWrite(PORT_GREEN_BUTTON, 0)
+            elif(updated_price < init_price):
+                init_price = updated_price
+                grovepi.digitalWrite(PORT_RED_BUTTON, 1)
+                #recovery period (meant to prevent overloading api requests)
+                time.sleep(1)
+                grovepi.digitalWrite(PORT_RED_BUTTON, 0)
 
         # Display app name
         lcd.setText_norefresh(APPS[app]['name'])
