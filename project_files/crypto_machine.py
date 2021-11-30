@@ -49,7 +49,12 @@ while True:
 
         if grovepi.digitalRead(PORT_BUTTON):
             #make a new call to API to get updated price
-            continue
+            APPS = [ nomics.BITCOIN_APP ] 
+            # Cache to store values so we save time and don't abuse the APIs
+            CACHE = [''] * len(APPS)
+            for i in range(len(APPS)):
+                # Includes a two space offset so that the scrolling works better
+                CACHE[i] = '  ' + APPS[i]['init']()
 
         #if(updated_price == init_price):
         #continue
