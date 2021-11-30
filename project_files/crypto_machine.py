@@ -43,7 +43,7 @@ for i in range(len(APPS)):
 app = 0     # Active app
 ind = 0     # Output index
 
-init_price = CACHE[APPS[app][ind:ind+LCD_LINE_LEN]]
+init_price = int(CACHE[APPS[app][ind:ind+LCD_LINE_LEN]])
 while True:
     try:
 
@@ -55,7 +55,7 @@ while True:
             for i in range(len(APPS)):
                 # Includes a two space offset so that the scrolling works better
                 CACHE[i] = '  ' + APPS[i]['init']()
-            updated_price = CACHE[APPS[app][ind:ind+LCD_LINE_LEN]]
+            updated_price = int(CACHE[APPS[app][ind:ind+LCD_LINE_LEN]])
 
         if(updated_price == init_price):
             continue
