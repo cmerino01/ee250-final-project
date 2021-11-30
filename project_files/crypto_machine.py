@@ -58,7 +58,7 @@ while True:
             updated_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
             #hit the lights
             if(updated_price == init_price):
-                continue
+                time.sleep(1)
             elif(updated_price > init_price):
                 init_price = updated_price
                 grovepi.digitalWrite(PORT_GREEN_BUTTON, 1)
