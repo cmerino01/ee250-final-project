@@ -11,8 +11,11 @@ use python "input->" function, enter a line of a few letters, such as "abcd"
 
 import socket
 
-def client_fun():
-    
+def client_fun(temp):
+
+    fun_dict = temp
+    print(fun_dict)
+    """
     # TODO: Create a socket and connect it to the server at the designated IP and port
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("40.118.164.114", 8080))
@@ -25,5 +28,4 @@ def client_fun():
     # TODO: Receive a response from the server and close the TCP connection
     print(s.recv(1024).decode())
     s.close()
-
-    return 1
+    """
