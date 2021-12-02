@@ -80,11 +80,8 @@ while True:
                 grovepi.digitalWrite(PORT_BUZZER, 0)
                 grovepi.digitalWrite(PORT_RED_BUTTON, 0)
 
-        if ind == 0:
-            lcd.setText_norefresh(APPS[app]['name'])    # Display app name
-            lcd.setText_norefresh('\n' + str(round(float(CACHE[app][ind:ind+LCD_LINE_LEN]),2)))  #Display Output
-        
-        ind = (ind+1) % len(CACHE[app]) #This will make it keep scrolling
+        lcd.setText_norefresh(APPS[app]['name'])    # Display app name
+        lcd.setText_norefresh('\n' + str(init_price))  #Display Output
 
     except KeyboardInterrupt:
         # Gracefully shutdown on Ctrl-C
