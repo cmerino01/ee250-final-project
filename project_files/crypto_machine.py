@@ -59,6 +59,7 @@ while True:
                 CACHE[i] = '  ' + APPS[i]['init']()
             updated_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
             updated_price = round(updated_price, 2)
+            time.sleep(1)
 
             #hit the lights
             if(updated_price == init_price):
