@@ -10,22 +10,23 @@ use python "input->" function, enter a line of a few letters, such as "abcd"
 # Team Member Name: Imtiaz Uddin
 
 import socket
+import pickle
 
 def client_fun(temp):
 
+    #collect main_dict from crypto_machine
     fun_dict = temp
-    print(fun_dict)
-    """
-    # TODO: Create a socket and connect it to the server at the designated IP and port
+
+    #make pickle file
+    msg = pickle.dumps(fun_dict)
+
+    #Create a socket and connect it to the server at the designated IP and port
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("40.118.164.114", 8080))
-    # For testing on local machine: "127.0.0.1", 10002
     
-    # TODO: Get user input and send it to the server using your TCP socket
-    text = input("Enter user input: ").encode()
-    s.send(text)
+    #Send dictionary to the server using TCP socket
+    s.send(msg)
     
     # TODO: Receive a response from the server and close the TCP connection
     print(s.recv(1024).decode())
     s.close()
-    """
