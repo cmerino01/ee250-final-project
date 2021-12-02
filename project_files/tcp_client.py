@@ -16,6 +16,7 @@ def client_fun(temp):
 
     #make json file
     msg = json.dumps(fun_dict)
+    print(type(msg))
 
     #Create a socket and connect it to the server at the designated IP and port
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -27,5 +28,5 @@ def client_fun(temp):
     
     # TODO: Receive a response from the server and close the TCP connection
     print(s.recv(1024).decode())
-    return 1
     s.close()
+    return 1
