@@ -12,10 +12,12 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
     e. Connect to Buzzer to D2  
     f. Connect Rotary Angle Sensor/Potentiometer to A0  
 2. Once SSH'd or in RPI terminal head to main directory of project  
-    a. run `sudo pip3 install pytz`
+    a. run `sudo pip3 install pytz`  
+    b. run `sudo apt-get install python3-tk`  
 3. CD to **project_files**
 4. Run **crypto_machine.py** via python3, `python3 crypto_machine.py`
 5. In order to retrieve latest price of Bitcoin press the button
+6. After the 10th update, you will receive a link to a recent trend line in the terminal.  
 
 *Green light indicates a increase in price from the previous collected price*  
 *Red light indicates a decrease in price from the previous collected price*  
@@ -29,6 +31,11 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 * requests
 * datetime
 * pytz
+* base64
+* matplotlib
+* pickle
+* socket
 
 **API's used:**
 * [Nomics Bitcoin API](https://p.nomics.com/cryptocurrency-bitcoin-api)
+* [IMG](https://api.imgbb.com)

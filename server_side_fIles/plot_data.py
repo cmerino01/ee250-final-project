@@ -31,7 +31,7 @@ plt.xlabel('Time (PST)')
 plt.ylabel('USD')
 #set title
 plt.title('Recent BTC Trend Graph')
-#save the graph - very important that this file be in the same directory as IMGBB & testing.py
+#save the graph - very important that this file be in the same directory as IMGBB.py & tcp_server.py
 plt.savefig('recent_trend.png')
 #calls the api
 IMGBB.url_call()
