@@ -4,7 +4,7 @@ import time
 import pytz
 from datetime import datetime
 from pytz import timezone
-from tcp_client import server_fun
+from tcp_client import client_fun
 
 
 sys.path.append('/home/pi/Dexter/GrovePi/Software/Python')
@@ -67,7 +67,7 @@ while True:
 
         if(len(main_dict) == 10):
             #using tcp client to send data to server to process
-            #lnk = server_fun()
+            #lnk = client_fun()
             #link to time v price plot
             print("lnk") #should just be lnk but placeholder rn
             #clear main_dict

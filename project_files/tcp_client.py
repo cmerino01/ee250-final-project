@@ -10,9 +10,8 @@ use python "input->" function, enter a line of a few letters, such as "abcd"
 # Team Member Name: Imtiaz Uddin
 
 import socket
-from crypto_machine import main_dict
 
-def server_fun():
+def client_fun():
     
     # TODO: Create a socket and connect it to the server at the designated IP and port
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -26,3 +25,5 @@ def server_fun():
     # TODO: Receive a response from the server and close the TCP connection
     print(s.recv(1024).decode())
     s.close()
+
+    return 1
