@@ -1,9 +1,10 @@
 import requests
 import sys
 import time
+import pytz
 from datetime import datetime
 from pytz import timezone
-import pytz
+
 
 sys.path.append('/home/pi/Dexter/GrovePi/Software/Python')
 
