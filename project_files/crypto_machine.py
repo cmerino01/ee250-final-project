@@ -1,6 +1,9 @@
 import requests
 import sys
 import time
+from datatime import datetime
+from pytz import timezone
+import pytz
 
 sys.path.append('/home/pi/Dexter/GrovePi/Software/Python')
 
@@ -45,6 +48,14 @@ ind = 0     # Output index
 
 init_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
 init_price = round(init_price, 2)
+
+date_format ='%H:%M:%S %Z'
+first_date = datetime.now(tz=pyzt.utc)
+first_date = first_date.astimezone(timezone('US/Pacific'))
+
+main_dict = {}
+main_dict[init_price].append(first_date)
+print(main_dict)
 
 while True:
     try:
