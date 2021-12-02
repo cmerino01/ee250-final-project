@@ -19,8 +19,8 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 
 *Green light indicates a increase in price from the previous collected price*  
 *Red light indicates a decrease in price from the previous collected price*  
-*If both lights turn on it means the price has not changed in the given time period* 
-*The buzzer only rings when a change has occurred* 
+*If both lights turn on it means the price has not changed in the given time period*  
+*The buzzer only rings when a change has occurred*  
 
 
 **External libraries that were used:**
