@@ -82,7 +82,6 @@ while True:
 
         #lcd.setText_norefresh(APPS[app]['name'])    # Display app name
         lcd.setText_norefresh(APPS[app]['name'] + '\n' + str(init_price))  #Display Output
-        time.sleep(0.05)
 
     except KeyboardInterrupt:
         # Gracefully shutdown on Ctrl-C
