@@ -63,9 +63,9 @@ while True:
             #hit the lights
             if(updated_price == init_price):
                 grovepi.digitalWrite(PORT_GREEN_BUTTON, 1)
-                grovepi.digitalWrite(PORT_BUZZER, 1)
+                grovepi.digitalWrite(PORT_RED_BUTTON, 1)
                 time.sleep(1)
-                grovepi.digitalWrite(PORT_BUZZER, 0)
+                grovepi.digitalWrite(PORT_RED_BUTTON, 0)
                 grovepi.digitalWrite(PORT_GREEN_BUTTON, 0)
             elif(updated_price > init_price):
                 init_price = updated_price
