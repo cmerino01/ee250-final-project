@@ -44,6 +44,7 @@ app = 0     # Active app
 ind = 0     # Output index
 
 init_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
+round(init_price, 2)
 while True:
     try:
 
@@ -56,6 +57,7 @@ while True:
                 # Includes a two space offset so that the scrolling works better
                 CACHE[i] = '  ' + APPS[i]['init']()
             updated_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
+            round(updated_price, 2)
             #hit the lights
             if(updated_price == init_price):
                 time.sleep(1)
