@@ -66,6 +66,7 @@ while True:
     try:
 
         if(len(main_dict) == 10):
+            print(sys.getsizeof(main_dict))
             #using tcp client to send data to server to process
             lnk = client_fun(main_dict)
             #link to time v price plot
