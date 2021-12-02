@@ -67,7 +67,8 @@ while True:
 
         if(len(main_dict) == 10):
             #using tcp client to send data to server to process
-            lnk = client_fun(main_dict)
+            print(str(main_dict))
+            #lnk = client_fun(main_dict)
             #link to time v price plot
             #print("lnk") #should just be lnk but placeholder rn
             #clear main_dict
