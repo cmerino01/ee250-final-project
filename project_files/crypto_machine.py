@@ -56,7 +56,7 @@ first_date = first_date.astimezone(timezone('US/Pacific'))
 test = str(first_date)
 
 main_dict = {}
-main_dict[init_price].append(test)
+main_dict[init_price] = test
 print(main_dict)
 
 while True:
