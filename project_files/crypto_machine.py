@@ -87,6 +87,7 @@ while True:
         ind += 1
         if (ind >= len(str(init_price))):
             ind -= len(str(init_price))
+            time.sleep(1)
         #ind = (ind+1) % len(str(init_price)) #This will make it keep scrolling
 
     except KeyboardInterrupt:
