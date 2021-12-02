@@ -109,6 +109,7 @@ while True:
                 grovepi.digitalWrite(PORT_RED_BUTTON, 0)
 
         lcd.setText_norefresh(APPS[app]['name'] + '\n' + '$' + str(init_price))  #Display Output
+        print(len(main_dict))
 
     except KeyboardInterrupt:
         # Gracefully shutdown on Ctrl-C
