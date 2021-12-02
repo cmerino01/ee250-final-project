@@ -83,11 +83,10 @@ while True:
         if ind == 0:
             lcd.setText_norefresh(APPS[app]['name'])    # Display app name
         
-        lcd.setText('\n' + str(round(float(CACHE[app][ind:ind+LCD_LINE_LEN]),2)))  #Display Output
+        lcd.setText_norefresh('\n' + str(round(float(CACHE[app][ind:ind+LCD_LINE_LEN]),2)))  #Display Output
         ind += 1
         if (ind >= len(str(init_price))):
             ind -= len(str(init_price))
-            time.sleep(1)
         #ind = (ind+1) % len(str(init_price)) #This will make it keep scrolling
 
     except KeyboardInterrupt:
