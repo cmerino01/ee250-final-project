@@ -61,6 +61,11 @@ main_dict[init_price] = test[11:16]
 while True:
     try:
 
+        if(len(main_dict) == 10):
+            #send dict to client/server for processing
+            #return link to img from plot
+            #clear main_dict
+            continue
         
         if grovepi.digitalRead(PORT_BUTTON):
             #make a new call to API to get updated price
