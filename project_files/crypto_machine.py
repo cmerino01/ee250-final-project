@@ -57,11 +57,11 @@ test = str(first_date)
 
 main_dict = {}
 main_dict[init_price] = test[11:16]
-print(main_dict)
 
 while True:
     try:
 
+        
         if grovepi.digitalRead(PORT_BUTTON):
             #make a new call to API to get updated price
             APPS = [ nomics.BITCOIN_APP ] 
@@ -98,7 +98,6 @@ while True:
                 grovepi.digitalWrite(PORT_BUZZER, 0)
                 grovepi.digitalWrite(PORT_RED_BUTTON, 0)
 
-        #lcd.setText_norefresh(APPS[app]['name'])    # Display app name
         lcd.setText_norefresh(APPS[app]['name'] + '\n' + '$' + str(init_price))  #Display Output
 
     except KeyboardInterrupt:
