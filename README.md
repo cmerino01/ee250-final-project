@@ -19,7 +19,7 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 
 *Green light indicates a increase in price from the previous collected price*  
 *Red light indicates a decrease in price from the previous collected price*  
-*No light means the price has not changed in the given time period*  
+*If both lights turn on it means the price has not changed in the given time period*  
 
 
 **External libraries that were used:**
