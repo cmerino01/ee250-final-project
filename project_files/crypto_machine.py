@@ -44,10 +44,7 @@ app = 0     # Active app
 ind = 0     # Output index
 
 init_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
-print(type(init_price))
-print(init_price)
 init_price = round(init_price, 2)
-print(init_price)
 
 while True:
     try:
@@ -61,9 +58,7 @@ while True:
                 # Includes a two space offset so that the scrolling works better
                 CACHE[i] = '  ' + APPS[i]['init']()
             updated_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
-            print(updated_price)
             updated_price = round(updated_price, 2)
-            print(updated_price)
 
             #hit the lights
             if(updated_price == init_price):
@@ -88,7 +83,7 @@ while True:
         if ind == 0:
             lcd.setText_norefresh(APPS[app]['name'])    # Display app name
         
-        lcd.setText_norefresh('\n' + CACHE[app][ind:ind+LCD_LINE_LEN])  #Display Output
+        lcd.setText_norefresh('\n' + round(float(CACHE[app][ind:ind+LCD_LINE_LEN),2)])  #Display Output
         ind = (ind+1) % len(CACHE[app]) #This will make it keep scrolling
 
     except KeyboardInterrupt:
