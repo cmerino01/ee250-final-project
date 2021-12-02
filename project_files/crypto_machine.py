@@ -1,7 +1,7 @@
 import requests
 import sys
 import time
-from datatime import datetime
+from datetime import datetime
 from pytz import timezone
 import pytz
 
