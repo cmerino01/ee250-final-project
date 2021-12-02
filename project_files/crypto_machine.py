@@ -78,8 +78,8 @@ while True:
 
         if ind == 0:
             lcd.setText_norefresh(APPS[app]['name'])    # Display app name
-        #app
-        lcd.setText_norefresh('\n' + CACHE[round(app,2)][ind:ind+LCD_LINE_LEN])  #Display Output
+        
+        lcd.setText_norefresh('\n' + CACHE[app][ind:ind+LCD_LINE_LEN])  #Display Output
         ind = (ind+1) % len(CACHE[app]) #This will make it keep scrolling
 
     except KeyboardInterrupt:
