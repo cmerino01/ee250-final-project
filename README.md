@@ -5,12 +5,12 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 
 **Instructions on how to compile/execute program(s):**
 1. Set up RPI
-    a. Connect LCD Screen to I2C-3
-    b. Connect Button to D8
-    c. Connect GREEN LED to D4 
-    d. Connect RED LED to D3
-    e. Connect to Buzzer to D2
-    f. Connect Rotary Angle Sensor/Potentiometer to A0
+    a. Connect LCD Screen to I2C-3  
+    b. Connect Button to D8  
+    c. Connect GREEN LED to D4  
+    d. Connect RED LED to D3  
+    e. Connect to Buzzer to D2  
+    f. Connect Rotary Angle Sensor/Potentiometer to A0  
 2. Once SSH'd or in RPI terminal head to main directory of project
 3. CD to **project_files**
 4. Run **crypto_machine.py** via python3, `python3 crypto_machine.py`
