@@ -57,12 +57,12 @@ test = str(first_date)
 
 main_dict = {}
 main_dict[init_price] = test[11:19]
-print(main_dict)
 
 while True:
     try:
 
         if(len(main_dict) == 10):
+            print(main_dict)
             #send dict to client/server for processing
             #return link to img from plot
             #clear main_dict
@@ -78,7 +78,10 @@ while True:
                 CACHE[i] = '  ' + APPS[i]['init']()
             updated_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
             updated_price = round(updated_price, 2)
-            #main_dict[updated_price] = tme[11:16]
+            innertemp = datetime.now(tz=pytz.utc)
+            innertemp = innertemp.astimezone(timezone('US/Pacific'))
+            tme = str(innertemp)
+            main_dict[updated_price] = tme[11:19]
             time.sleep(1)
 
             #hit the lights
