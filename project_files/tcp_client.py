@@ -23,7 +23,8 @@ def client_fun(temp):
     s.connect(("168.62.194.224", 8080))
     
     #Send dictionary to the server using TCP socket
-    s.sendall(msg)
+    dat = msg.encode()
+    s.sendall(dat)
     
     # TODO: Receive a response from the server and close the TCP connection
     print(s.recv(1024).decode())
