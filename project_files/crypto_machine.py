@@ -4,6 +4,7 @@ import time
 import pytz
 from datetime import datetime
 from pytz import timezone
+from tcp_client import server_fun
 
 
 sys.path.append('/home/pi/Dexter/GrovePi/Software/Python')
@@ -65,10 +66,12 @@ while True:
     try:
 
         if(len(main_dict) == 10):
-            #send dict to client/server for processing
-            #return link to img from plot
+            #using tcp client to send data to server to process
+            lnk = server_fun()
+            #link to time v price plot
+            print("lnk") #should just be lnk but placeholder rn
             #clear main_dict
-            continue
+            main_dict.clear()
         
         if grovepi.digitalRead(PORT_BUTTON):
             #make a new call to API to get updated price
