@@ -10,6 +10,7 @@ use python "input->" function, enter a line of a few letters, such as "abcd"
 # Team Member Name: Imtiaz Uddin
 
 import socket
+from crypto_machine import main_dict
 
 def main():
     
