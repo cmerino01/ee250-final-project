@@ -85,7 +85,7 @@ while True:
         
         lcd.setText_norefresh('\n' + str(round(float(CACHE[app][ind:ind+LCD_LINE_LEN]),2)))  #Display Output
         ind += 1
-        if (ind >= len(str(init_price)):
+        if (ind >= len(str(init_price))):
             ind -= len(str(init_price))
         #ind = (ind+1) % len(str(init_price)) #This will make it keep scrolling
 
