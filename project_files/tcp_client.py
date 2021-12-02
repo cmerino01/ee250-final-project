@@ -7,15 +7,15 @@ use python "input->" function, enter a line of a few letters, such as "abcd"
 """
 
 import socket
-import pickle
+import json
 
 def client_fun(temp):
 
     #collect main_dict from crypto_machine
     fun_dict = temp
 
-    #make pickle file
-    msg = pickle.dumps(fun_dict)
+    #make json file
+    msg = json.dumps(fun_dict)
 
     #Create a socket and connect it to the server at the designated IP and port
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
