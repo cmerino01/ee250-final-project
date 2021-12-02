@@ -81,7 +81,7 @@ while True:
                 grovepi.digitalWrite(PORT_RED_BUTTON, 0)
 
         lcd.setText_norefresh(APPS[app]['name'])    # Display app name
-        lcd.setText_norefresh('\n' + str(init_price))  #Display Output
+        lcd.setText('\n' + str(init_price))  #Display Output
         time.sleep(0.05)
 
     except KeyboardInterrupt:
