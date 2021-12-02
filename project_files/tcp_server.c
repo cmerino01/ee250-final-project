@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
         if (n < 0) 
             error("ERROR reading from socket");
         //printf("Here is the message: %s\n",buffer);
-        n = write(newsockfd,"I got your message",18);
+        n = write(newsockfd,"I got the readings",18);
         if (n < 0) 
             error("ERROR writing to socket");
         close(newsockfd);
