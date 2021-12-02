@@ -53,9 +53,10 @@ init_price = round(init_price, 2)
 date_format ='%H:%M:%S %Z'
 first_date = datetime.now(tz=pytz.utc)
 first_date = first_date.astimezone(timezone('US/Pacific'))
+test = str(first_date)
 
 main_dict = {}
-main_dict[init_price].append(first_date)
+main_dict[init_price].append(test)
 print(main_dict)
 
 while True:
