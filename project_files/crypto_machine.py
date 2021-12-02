@@ -50,7 +50,7 @@ init_price = float(CACHE[app][ind:ind+LCD_LINE_LEN])
 init_price = round(init_price, 2)
 
 date_format ='%H:%M:%S %Z'
-first_date = datetime.now(tz=pyzt.utc)
+first_date = datetime.now(tz=pytz.utc)
 first_date = first_date.astimezone(timezone('US/Pacific'))
 
 main_dict = {}
