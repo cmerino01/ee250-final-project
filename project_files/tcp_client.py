@@ -6,9 +6,6 @@ Establish a socket connection -> send a short message -> get a message back -> t
 use python "input->" function, enter a line of a few letters, such as "abcd"
 """
 
-# Github repo link: https://github.com/usc-ee250-fall2021/lab03-lab3-imtiaz/tree/lab03/ee250/lab03
-# Team Member Name: Imtiaz Uddin
-
 import socket
 import pickle
 
