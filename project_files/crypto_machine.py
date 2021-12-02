@@ -80,7 +80,7 @@ while True:
             lcd.setText_norefresh(APPS[app]['name'])    # Display app name
         
         lcd.setText_norefresh('\n' + CACHE[app][ind:ind+LCD_LINE_LEN])  #Display Output
-        ind = (ind+1) % len(CACHE[app]) #This will make it keep scrolling
+        #ind = (ind+1) % len(CACHE[app]) #This will make it keep scrolling
 
     except KeyboardInterrupt:
         # Gracefully shutdown on Ctrl-C
