@@ -56,7 +56,7 @@ first_date = first_date.astimezone(timezone('US/Pacific'))
 test = str(first_date)
 
 main_dict = {}
-main_dict[init_price] = test[11:19]
+main_dict[test[11:19]] = init_price
 
 while True:
     try:
@@ -81,7 +81,7 @@ while True:
             innertemp = datetime.now(tz=pytz.utc)
             innertemp = innertemp.astimezone(timezone('US/Pacific'))
             tme = str(innertemp)
-            main_dict[updated_price] = tme[11:19]
+            main_dict[tme[11:19]] = updated_price
             time.sleep(1)
 
             #hit the lights
