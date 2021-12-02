@@ -4,7 +4,7 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 [Github Repo Link](https://github.com/cmerino01/ee250-final-project)  
 
 **Instructions on how to compile/execute program(s):**
-1. Set up RPI
+1. Set up RPI  
     a. Connect LCD Screen to I2C-3  
     b. Connect Button to D8  
     c. Connect GREEN LED to D4  
