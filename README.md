@@ -38,4 +38,13 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 * [Nomics Bitcoin API](https://p.nomics.com/cryptocurrency-bitcoin-api)
 * [IMGUR](https://api.imgur.com/)
 
-**SERVER SIDE FILES SHOULD NOT BE TOUCHED (HANDLED THROUGH AN AZURE VM)**
+**SERVER SIDE FILES**
+When setting up your Azure (or any other cloud service) VM ensure to have the follow installed:  
+1. `sudo apt install python3-pip`
+2. `pip3 install matplotlib`
+3. `sudo apt-get install python3-matplotlib`
+4. `sudo apt-get install python3-tk`
+5. `sudo apt-get install python3-psutil`
+
+*Ensure that the IMGUR.py, plot_data.py, and tcp_server.py files are in the root of your vm* 
+**IMGBB.py is left as a back up in case the IMGUR API is down, change line 42 on plot_data.py to IMGBB.url_call() to switch services**
