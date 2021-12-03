@@ -17,12 +17,14 @@ def client_fun(temp):
 
     #make pickle file
     msg = pickle.dumps(fun_dict)
+    
     print(type(msg))
+    #print(msg)
 
     #Create a socket and connect it to the server at the designated IP and port
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    #s.connect(("40.118.164.114", 8080))
-    s.connect(("168.62.194.224", 8080))
+    s.connect(("40.118.164.114", 8080))
+    #s.connect(("168.62.194.224", 8080))
     
     #Send dictionary to the server using TCP socket
     print("Init File Size:" + str(sys.getsizeof(msg)))
