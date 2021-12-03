@@ -23,11 +23,6 @@ PORT_GREEN_BUTTON = 4       # D4
 
 LCD_LINE_LEN = 16
 
-# Connect the Grove Rotary Angle Sensor to analog port A0
-# SIG,NC,VCC,GND
-potentiometer = 0
-grovepi.pinMode(potentiometer,"INPUT")
-
 # Setup
 grovepi.pinMode(PORT_BUZZER, "OUTPUT")
 grovepi.pinMode(PORT_GREEN_BUTTON, "INPUT")

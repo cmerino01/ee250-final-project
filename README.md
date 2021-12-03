@@ -37,3 +37,5 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 **API's used:**
 * [Nomics Bitcoin API](https://p.nomics.com/cryptocurrency-bitcoin-api)
 * [IMGUR](https://api.imgur.com/)
+
+**SERVER SIDE FILES SHOULD NOT BE TOUCHED (HANDLED THROUGH AN AZURE VM)**
