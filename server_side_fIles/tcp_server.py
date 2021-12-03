@@ -1,6 +1,7 @@
 import socket
 import pickle
 import sys
+import time
 
 from plot_data import plot
 
@@ -26,6 +27,7 @@ def restart_program():
 
 #set up the socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+time.sleep(5)
 #allow any IP to be commincated with via port 8080 (easier to do all 0's)
 s.bind(("0.0.0.0", 8080))
 #listen for any tx
