@@ -30,4 +30,3 @@ def client_fun(temp):
     # TODO: Receive a response from the server and close the TCP connection
     print(s.recv(1024).decode())
     s.close()
-    return 1
