@@ -25,9 +25,7 @@ try:
             else:
                 #unpack pickle
                 crypto_data = pickle.loads(data)
-                print(crypto_data)
-                #crypto_data  = json.loads(crypto_data)
-                #link = plot(crypto_data)
-                conn.sendall(("checkpoint").encode()) #final sendall message should be link
+                link = plot(crypto_data)
+                conn.sendall((link).encode()) #final sendall message should be link
 except KeyboardInterrupt:
     s.close()
