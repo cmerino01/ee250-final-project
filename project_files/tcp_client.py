@@ -26,7 +26,7 @@ def client_fun(temp):
     
     #Send dictionary to the server using TCP socket
     print("Init File Size:" + str(sys.getsizeof(msg)))
-    s.sendall(msg)
+    s.send(msg)
     
     # TODO: Receive a response from the server and close the TCP connection
     print(s.recv(1024).decode())
