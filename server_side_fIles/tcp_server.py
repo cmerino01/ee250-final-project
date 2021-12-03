@@ -12,18 +12,22 @@ s.bind(("0.0.0.0", 8080))
 s.listen()
 #accept tx
 conn, addr = s.accept()
-with conn:
-    #connection establish message
-    print('Connected by', addr)
-    while True:
-        #take in data
-        data = conn.recv(1024)
-        #testing - lines 18,22, and 23 are where I am getting issues. Maybe there is another way to tx dict?
-        print("Received size:" + str(sys.getsizeof(data)))
-        #unpack pickle
-        crypto_data = pickle.loads(data)
-        #crypto_data  = json.loads(crypto_data)
-        #link = plot(crypto_data)
-        if not data:
-            continue
-        conn.sendall(("checkpoint").encode()) #final sendall message should be link
+try:
+    with conn:
+        #connection establish message
+        print('Connected by', addr)
+        while True:
+            #take in data
+            data = conn.recv(1024)
+            if not data:
+                continue
+                print("test")
+            else:
+                #unpack pickle
+                crypto_data = pickle.loads(data)
+                print(crypto_data)
+                #crypto_data  = json.loads(crypto_data)
+                #link = plot(crypto_data)
+                conn.sendall(("checkpoint").encode()) #final sendall message should be link
+except KeyboardInterrupt:
+    s.close()
