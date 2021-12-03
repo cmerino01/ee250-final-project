@@ -13,7 +13,6 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
     f. Connect Rotary Angle Sensor/Potentiometer to A0  
 2. Once SSH'd or in RPI terminal head to main directory of project  
     a. run `sudo pip3 install pytz`  
-    b. run `sudo apt-get install python3-tk`  
 3. CD to **project_files**
 4. Run **crypto_machine.py** via python3, `python3 crypto_machine.py`
 5. In order to retrieve latest price of Bitcoin press the button
