@@ -8,6 +8,7 @@ if sys.version_info[0] == 3:
 import matplotlib.pyplot as plt
 
 import IMGBB
+import IMGUR
 
 def plot(temp):
     #this is just static, but should be obtained through tcp_server.py, it should be whatever the pickle/dict had
@@ -38,5 +39,5 @@ def plot(temp):
     #save the graph - very important that this file be in the same directory as IMGBB.py & tcp_server.py
     plt.savefig('recent_trend.png')
     #calls the api
-    lnk = IMGBB.url_call()
+    lnk = IMGUR.url_call()
     return lnk
