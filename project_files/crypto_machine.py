@@ -62,18 +62,6 @@ test = str(first_date)
 main_dict = {}
 main_dict[test[11:19]] = init_price
 
-"""
-testing purposes
-"""
-main_dict["2"] = 1
-main_dict["3"] = 1 
-main_dict["4"] = 1 
-main_dict["5"] = 1 
-main_dict["6"] = 1
-main_dict["7"] = 1
-main_dict["8"] = 1
-main_dict["9"] = 1   
-
 while True:
     try:
 

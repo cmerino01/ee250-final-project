@@ -16,7 +16,7 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 3. CD to **project_files**
 4. Run **crypto_machine.py** via python3, `python3 crypto_machine.py`
 5. In order to retrieve latest price of Bitcoin press the button
-6. After the 10th update, you will receive a link to a recent trend line in the terminal.  
+6. After the 10th update, you will receive a link to a recent trend line in the terminal. (Should be 9 button clicks the first time)  
 
 *Green light indicates a increase in price from the previous collected price*  
 *Red light indicates a decrease in price from the previous collected price*  
@@ -37,4 +37,4 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 
 **API's used:**
 * [Nomics Bitcoin API](https://p.nomics.com/cryptocurrency-bitcoin-api)
-* [IMG](https://api.imgbb.com)
+* [IMGUR](https://api.imgur.com/)

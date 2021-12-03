@@ -24,7 +24,6 @@ def client_fun(temp):
     s.connect(("168.62.194.224", 8080))
     
     #Send dictionary to the server using TCP socket
-    print("Init File Size:" + str(sys.getsizeof(msg)))
     s.sendall(msg)
     
     # TODO: Receive a response from the server and close the TCP connection
