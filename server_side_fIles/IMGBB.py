@@ -27,4 +27,4 @@ def url_call():
             #obtain URL for image
             url = info["url_viewer"]
             #print the url 
-            print(url) #this needs to be changed to return the server response
+            return url #this needs to be changed to return the server response

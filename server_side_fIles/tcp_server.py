@@ -2,6 +2,8 @@ import socket
 import pickle
 import sys
 
+from plot_data import plot
+
 #set up the socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #allow any IP to be commincated with via port 8080 (easier to do all 0's)
@@ -21,6 +23,7 @@ with conn:
         #unpack pickle
         crypto_data = pickle.loads(data)
         #crypto_data  = json.loads(crypto_data)
+        #link = plot(crypto_data)
         if not data:
             continue
-        conn.sendall(("checkpoint").encode()) #final sendall message should be the url from .py
+        conn.sendall(("checkpoint").encode()) #final sendall message should be link
