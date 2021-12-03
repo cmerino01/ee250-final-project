@@ -10,7 +10,6 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
     c. Connect GREEN LED to D4  
     d. Connect RED LED to D3  
     e. Connect to Buzzer to D2  
-    f. Connect Rotary Angle Sensor/Potentiometer to A0  
 2. Once SSH'd or in RPI terminal head to main directory of project  
     a. run `sudo pip3 install pytz`  
 3. CD to **project_files**
