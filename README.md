@@ -46,5 +46,5 @@ When setting up your Azure (or any other cloud service) VM ensure to have the fo
 4. `sudo apt-get install python3-tk`
 5. `sudo apt-get install python3-psutil`
 
-*Ensure that the IMGUR.py, plot_data.py, and tcp_server.py files are in the root of your vm*  
+*Ensure that the IMGUR.py, plot_data.py, and tcp_server.py files are in the root of your VM*  
 **IMGBB.py is left as a back up in case the IMGUR API is down, change line 42 on plot_data.py to IMGBB.url_call() to switch services**  
