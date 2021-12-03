@@ -1,9 +1,11 @@
+import matplotlib
+matplotlib.use('Agg')
+
 import sys
 if sys.version_info[0] == 3:
     import tkinter as tk
 
 import matplotlib.pyplot as plt
-plt.use('Agg')
 
 import IMGBB
 
