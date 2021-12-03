@@ -4,6 +4,26 @@ import sys
 
 from plot_data import plot
 
+import os
+import sys
+import psutil
+import logging
+
+def restart_program():
+    """Restarts the current program, with file objects and descriptors
+       cleanup
+    """
+
+    try:
+        p = psutil.Process(os.getpid())
+        for handler in p.open_files() + p.connections():
+            os.close(handler.fd)
+    except Exception as e:
+        logging.error(e)
+
+    python = sys.executable
+    os.execl(python, python, *sys.argv)
+
 #set up the socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #allow any IP to be commincated with via port 8080 (easier to do all 0's)
@@ -27,5 +47,7 @@ try:
                 crypto_data = pickle.loads(data)
                 link = plot(crypto_data)
                 conn.sendall((link).encode()) #final sendall message should be link
+                s.close()
+                restart_program()
 except KeyboardInterrupt:
     s.close()
