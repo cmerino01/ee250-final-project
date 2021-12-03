@@ -17,6 +17,7 @@ def client_fun(temp):
 
     #make pickle file
     msg = pickle.dumps(fun_dict)
+    print(type(msg))
 
     #Create a socket and connect it to the server at the designated IP and port
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
