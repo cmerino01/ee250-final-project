@@ -5,7 +5,7 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 
 **Instructions on how to compile/execute program(s):**  
 *`crypto_machine.py`, `nomics.py`, and `tcp_client.py` should all be in the same directory*  
-*In addition, ensure that line 23 in tcp_client.py has your Azure(Cloud) VM IP Address*  
+*In addition, ensure that line 23 in `tcp_client.py` has your Azure(Cloud) VM IP Address*  
 1. Set up RPI  
     a. Connect LCD Screen to I2C-3  
     b. Connect Button to D8  
