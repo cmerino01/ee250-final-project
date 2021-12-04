@@ -1,6 +1,6 @@
 ![](https://bitcoin.org/img/icons/logotop.svg?1637078881)  
 Team Members: Christopher Merino Brito & Imtiaz Uddin  
-[Video](example.com)  
+[Video](https://youtu.be/iNQW62MOOXw)  
 [Github Repo Link](https://github.com/cmerino01/ee250-final-project)  
 
 **Instructions on how to compile/execute program(s):**  
@@ -39,6 +39,7 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 **API's used:**
 * [Nomics Bitcoin API](https://p.nomics.com/cryptocurrency-bitcoin-api)
 * [IMGUR](https://api.imgur.com/)
+* [IMGBB API](https://api.imgbb.com)
 
 **SERVER SIDE FILES**  
 When setting up your Azure (or any other cloud service) VM ensure to have the follow installed:  
