@@ -3,7 +3,7 @@ Team Members: Christopher Merino Brito & Imtiaz Uddin
 [Video](example.com)  
 [Github Repo Link](https://github.com/cmerino01/ee250-final-project)  
 
-**Instructions on how to compile/execute program(s):**
+**Instructions on how to compile/execute program(s):**  
 *`crypto_machine.py`, `nomics.py`, and `tcp_client.py` should all be in the same directory*  
 *In addition, ensure that line 23 in tcp_client.py has your Azure(Cloud) VM IP Address*  
 1. Set up RPI  
